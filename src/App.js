@@ -3,8 +3,11 @@ import './App.css';
 import React,{useState,useEffect,useRef} from 'react';
 
 function App() {
+    const names =  localStorage;
     const [name,setName] = useState(()=>{
+    return names.getItem('name');
   });
+  
   
   function handleNewName(e){
     setName(e.target.value);
